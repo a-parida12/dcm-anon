@@ -1,1 +1,0 @@
-bool_val = True

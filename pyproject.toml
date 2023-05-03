@@ -1,24 +1,26 @@
 [tool.poetry]
-name = "hapy_pypi"
-version = "0.1.1"
-description = "A poetry template for release to pypi"
+name = "dcm-anon"
+version = "0.0.1"
+description = "A Pure Python DCM Anonymizer"
 authors = ["Abhijeet Parida <abhijeet.parida@tum.de>"]
 license = "MIT"
-repository = 'https://github.com/a-parida12/poetry_pypi_template'
+repository = 'https://github.com/a-parida12/dcm-anon'
 readme = 'README.md'
-keywords = ["python", "packaging", "pypi", "poetry", "pip", "github-actions"]
+keywords = ["dicom anonimization", "anonimized-data", "dicom", "dcm", "GDPR", "HIPPA"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-numpy = "^1.22.3"
+pydicom = "^2.3.0"
 
-[tool.poetry.dev-dependencies]
-pytest = "^6.2.5"
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.3.1"
 flake8 = "^4.0.1"
-pytest-cov = "^3.0.0"
-commitizen = "^2.20.3"
-bandit = "^1.7.1"
-pre-commit = "^2.17.0"
+commitizen = "^3.2.1"
+bandit = "^1.7.5"
+pdoc3 = "^0.10.0"
+pre-commit = "^3.3.1"
+pytest-cov = "^4.0.0"
+
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

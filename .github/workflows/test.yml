@@ -4,9 +4,9 @@ on: [push]
 
 env:
   PYTHON_VERSION: "3.8.15"
-  PROJECT_FOLDER: hapy_pypi
+  PROJECT_FOLDER: dcm-anon
   TEST_FOLDER: tests
-  COVERAGE_LIMIT: 90
+  COVERAGE_LIMIT: 0
     
 jobs:
    build-test:
