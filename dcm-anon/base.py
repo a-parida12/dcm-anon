@@ -98,4 +98,4 @@ class Anonimizer(ABC):
     
     @abstractmethod
     def run(self, input:str, output:str)->None:
-        pass
+        raise NotImplementedError("Implementation of the conversion method coming soon")
