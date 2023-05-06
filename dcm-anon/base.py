@@ -81,7 +81,7 @@ class Anonimizer(ABC):
 
         # Anonimise all short and long text in dicom tags that need to be removed
         elif elem.VR in ['SH', 'LO']:
-            if elem.value != '' and str(elem.tag)[1:-1].replace(" ", '') in self.annon_tags:
+            if elem.value != '' and str(elem.tag)[1:-1].replace(" ", '') in annon_tags:
                 if 'NUMBER' in elem.name.upper() or 'SEQUENCE' in elem.name.upper() or 'ID' in elem.name.upper():
                     elem.value = get_digits(encrypt_string(elem.value)) if elem.VR == 'LO' else get_digits(encrypt_string(elem.value))[:16] # 'None'
                 else:
@@ -98,4 +98,4 @@ class Anonimizer(ABC):
     
     @abstractmethod
     def run(self, input:str, output:str)->None:
-        raise NotImplementedError("Implementation of the conversion method coming soon")
+        pass
