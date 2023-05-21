@@ -26,4 +26,3 @@ python -c 'import dcm-anon; print(dcm-anon.__version__)'
 
 ### dicom folder anonimizer
 
-
