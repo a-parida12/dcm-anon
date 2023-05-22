@@ -2,7 +2,8 @@
 
 In this project we use python >=3.8 and poetry for package management, fork your own version and clone it to the local and setup your environment in the following steps
 
-- setup a virtual environment and install poetry
+- setup a virtual environment called `.venv` and activate it.
+- install poetry
 
 ```pip install poetry```
 
