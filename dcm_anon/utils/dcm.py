@@ -3,6 +3,7 @@ from pathlib import Path
 import pydicom
 from dicom_csv import join_tree
 
+
 def check_valid_dcm(path: Path) -> bool:
     """check whether given file is a dicom or not
 
@@ -19,7 +20,8 @@ def check_valid_dcm(path: Path) -> bool:
 
     return True
 
-def bare_bones_ui(ui:str)->str:
+
+def bare_bones_ui(ui: str) -> str:
     """Get the main bare bones UID from a dicom header UID
 
     Args:
@@ -33,11 +35,12 @@ def bare_bones_ui(ui:str)->str:
     def hammingDist(str1, str2):
         i = 0
         count = 0
-        while(i < min(len(str1), len(str2))):
-            if(str1[i].upper() != str2[i].upper()):
+        while i < min(len(str1), len(str2)):
+            if str1[i].upper() != str2[i].upper():
                 count += 1
             i += 1
         return count
+
     dists = []
     for uid in all_uids:
         hamm_dist = hammingDist(uid, ui)
@@ -47,14 +50,15 @@ def bare_bones_ui(ui:str)->str:
 
     return all_uids[dists.index(min(dists))]
 
-def get_dicom_csv(parent_folder:str):
+
+def get_dicom_csv(parent_folder: str):
     """Generate Dicom header csv
 
     Args:
-        parent_folder (str): folder to crawl for dicoms     
+        parent_folder (str): folder to crawl for dicoms
 
     Returns:
         _type_: generated pandas df
     """
-    print('Creating CSV File')
-    return join_tree(parent_folder, ignore_extensions=['.jpeg', '.jpg', '.png'], verbose=1)
+    print("Creating CSV File")
+    return join_tree(parent_folder, ignore_extensions=[".jpeg", ".jpg", ".png"], verbose=1)
