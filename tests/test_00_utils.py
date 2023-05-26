@@ -1,9 +1,16 @@
-# import pytest
+import pytest
 
 # from hapy_pypi import bool_val
 
-# @pytest.mark.base
+#@pytest.mark.base
 # def test_00_1_base_test():
 #     assert type(bool_val) == bool
 #     assert bool_val == True
 
+
+@pytest.mark.base
+def test_dummy():
+    # remove during dev
+    bool_val = True
+    assert type(bool_val) == bool
+    assert bool_val == True
