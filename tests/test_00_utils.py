@@ -1,4 +1,5 @@
 import pytest
+from dcm_anon.utils.datetime import get_datetime, get_date, get_time
 
 
 @pytest.mark.base
@@ -10,15 +11,21 @@ def test_dummy():
 
 
 @pytest.mark.utils
-def test_getdatetime():
-    pass
+def test_get_datetime():
+    dt_string = get_datetime()
+    assert type(dt_string) == str
+    assert len(dt_string) == 14
 
 
 @pytest.mark.utils
 def test_get_date():
-    pass
+    date = get_date()
+    assert type(date) == str
+    assert len(date) == 8
 
 
 @pytest.mark.utils
 def test_get_time():
-    pass
+    time = get_time()
+    assert type(time) == str
+    assert len(time) == 6
