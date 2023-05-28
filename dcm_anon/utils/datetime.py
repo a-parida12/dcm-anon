@@ -1,5 +1,3 @@
-import re
-import string
 import datetime
 
 
@@ -9,8 +7,8 @@ def get_datetime() -> str:
     Returns:
         str: datetime
     """
-    x = str(datetime.datetime.now()).replace(" ", "")
-    return re.sub("[%s]" % re.escape(string.punctuation), "", x)[:14]
+    dt = str(datetime.datetime.now().strftime("%Y%m%d%H%M%S"))
+    return dt
 
 
 def get_date() -> str:
@@ -19,7 +17,10 @@ def get_date() -> str:
     Returns:
         str: date
     """
-    return get_datetime()[:8]
+    date = str(
+        datetime.datetime.strptime(get_datetime(), "%Y%m%d%H%M%S").date().strftime("%Y%m%d")
+    )
+    return date
 
 
 def get_time() -> str:
@@ -28,4 +29,7 @@ def get_time() -> str:
     Returns:
         str: time
     """
-    return get_datetime()[8:]
+    time = str(
+        datetime.datetime.strptime(get_datetime(), "%Y%m%d%H%M%S").time().strftime("%H%M%S")
+    )
+    return time
