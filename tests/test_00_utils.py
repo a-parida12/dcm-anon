@@ -11,21 +11,21 @@ def test_dummy():
 
 
 @pytest.mark.utils
-def test_get_datetime():
+def test_get_datetime() -> None:
     dt_string = get_datetime()
     assert type(dt_string) == str
     assert len(dt_string) == 14
 
 
 @pytest.mark.utils
-def test_get_date():
+def test_get_date() -> None:
     date = get_date()
     assert type(date) == str
     assert len(date) == 8
 
 
 @pytest.mark.utils
-def test_get_time():
+def test_get_time() -> None:
     time = get_time()
     assert type(time) == str
     assert len(time) == 6
