@@ -11,6 +11,7 @@ keywords = ["dicom anonimization", "anonimized-data", "dicom", "dcm", "GDPR", "H
 [tool.poetry.dependencies]
 python = "^3.8"
 pydicom = "^2.3.0"
+dicom-csv = "^0.2.8"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.3.1"

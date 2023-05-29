@@ -17,7 +17,7 @@ pip install dcm_anon
 To the check the setup, simply check the version number of the `dcm-anon` package by
 
 ```bash
-python -c 'import dcm-anon; print(dcm_anon.__version__)'
+python -c 'import dcm_anon; print(dcm_anon.__version__)'
 ```
 
 ## Usage
