@@ -3,7 +3,7 @@ from pydicom.dataset import FileDataset
 import tqdm
 import os
 import pydicom
-from dcm_anon.utils.dcm import check_valid_dcm
+from .utils.dcm import check_valid_dcm
 import glob
 
 
