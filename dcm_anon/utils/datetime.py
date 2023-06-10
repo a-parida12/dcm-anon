@@ -17,9 +17,7 @@ def get_date() -> str:
     Returns:
         str: date
     """
-    date = str(
-        datetime.datetime.strptime(get_datetime(), "%Y%m%d%H%M%S").date().strftime("%Y%m%d")
-    )
+    date = str(datetime.datetime.now().strftime("%Y%m%d"))
     return date
 
 
@@ -29,7 +27,5 @@ def get_time() -> str:
     Returns:
         str: time
     """
-    time = str(
-        datetime.datetime.strptime(get_datetime(), "%Y%m%d%H%M%S").time().strftime("%H%M%S")
-    )
+    time = str(datetime.datetime.now().strftime("%H%M%S"))
     return time
