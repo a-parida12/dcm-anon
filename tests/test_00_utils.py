@@ -3,16 +3,6 @@ from dcm_anon.utils.datetime import get_datetime, get_date, get_time
 from dcm_anon.utils.hash import encrypt_string, get_digits, get_non_digits
 
 
-
-
-@pytest.mark.base
-def test_dummy():
-    # remove during dev
-    bool_val = True
-    assert type(bool_val) == bool
-    assert bool_val
-
-
 @pytest.mark.utils
 def test_get_datetime() -> None:
     dt_string = get_datetime()
