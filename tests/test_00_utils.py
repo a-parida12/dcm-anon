@@ -46,3 +46,18 @@ def test_get_non_digits() -> None:
     op = get_non_digits(test_string)
     assert op == "abc"
     assert type(op) == str
+
+
+@pytest.mark.utils
+def test_check_valid_dcm():
+    pass
+
+
+@pytest.mark.utils
+def test_bare_bones_ui():
+    pass
+
+
+@pytest.mark.utils
+def test_get_dicom_csv():
+    pass
