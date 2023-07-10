@@ -5,7 +5,7 @@ on:
 
 env:
   PYTHON_VERSION: "3.8.15"
-  PROJECT_FOLDER: dcm-anon
+  PROJECT_FOLDER: dcm_anon
   TEST_FOLDER: tests
   
 jobs:

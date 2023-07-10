@@ -1,8 +1,8 @@
 from abc import ABC, abstractmethod
-from utils.datetime import get_date, get_datetime, get_time
-from utils.dcm import bare_bones_ui
-from utils.hash import get_digits, get_non_digits, encrypt_string
-from utils.tags import anon_tags
+from .utils.datetime import get_date, get_datetime, get_time
+from .utils.dcm import bare_bones_ui
+from .utils.hash import get_digits, get_non_digits, encrypt_string
+from .utils.tags import anon_tags
 from pydicom.dataelem import DataElement
 
 
