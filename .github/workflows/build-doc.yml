@@ -40,7 +40,7 @@ jobs:
       
       - name: Build Doc ✅
         run: |
-          poetry run pdoc --html -o build dcm-anon
+          poetry run pdoc --html -o build dcm_anon
       
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
